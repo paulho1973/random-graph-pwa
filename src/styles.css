@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-layout {
+    display: flex;
+}
+
+.left-layout {
+    position: relative;
+    height: 100vh;
+    width: 16rem;
+    background-color: aqua;
+}
+
+.right-layout {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.header-layout {
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    background-color:cadetblue;
+}
+
+.content-layout {
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    background-color:gainsboro;
+}
+
+.main2-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.header2-layout {
+    position: relative;
+    height: 8vh;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+    border-bottom: 1px solid #d8dcd6;
+}
+
+.content2-layout {
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background-color: whitesmoke;
+}
+
+.left2-layout {
+    position: relative;
+    height: 100vh;
+    width: 16rem;
+    background-color: white;
+}
+
+.right2-layout {
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+  
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    transform: rotate(90deg);  
+  }
+  
+  .tree {
+      padding: 20px;
+  }
+
+  .home {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+
+  .home-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .home-logo {
+      animation: home-logo-float infinite 3s ease-in-out;
+    }
+  }
+  
+  @keyframes home-logo-float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px)
+    }
+    100% {
+      transform: translateY(0px)
+    }
+  }
+
+  .center-container { 
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    width: 100%;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 50px;
+}
+
+/**********************************/
+
+.nav-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/**********************************/
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1pxsolid #fff;
+  position: absolute;
+  top: 32px;
+  left: -110%;
+  opacity: 1;
+  transition: all 0.5s ease;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-menu {
+    top : 52px;
+  }
+}
+
+.nav-menu.active {
+  background: #1f5156;
+  left: 0px;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/****************************************/
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+/*********************************************/
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  padding: 1.5rem;
+  width: 100%;
+  display: table;
+  cursor: pointer;
+}
+
+.nav-links:hover {
+  color: orange;
+}
