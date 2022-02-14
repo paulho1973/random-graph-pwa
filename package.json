@@ -1,5 +1,6 @@
 {
   "name": "random-graph-pwa",
+  "author": "Paul Ho",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
