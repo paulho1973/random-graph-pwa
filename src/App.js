@@ -65,9 +65,19 @@ function Layout() {
               <div class="nav-links" onClick={click ? handleClick : null}>Home</div>
             </li>
             </Link>
+            <Link to="/about">
+            <li className="nav-item">
+              <div class="nav-links" onClick={click ? handleClick : null}>About</div>
+            </li>
+            </Link>
             <Link to="/test">
             <li className="nav-item">
               <div class="nav-links" onClick={click ? handleClick : null}>Test</div>
+            </li>
+            </Link>
+            <Link to="/qrscan">
+            <li className="nav-item">
+              <div class="nav-links" onClick={click ? handleClick : null}>QR code scanner</div>
             </li>
             </Link>
           </ul>
@@ -97,7 +107,7 @@ function Home() {
 function About() {
   return (
     <div>
-      <h2>Random Graph is a collection reference of useful React Components with source code</h2>
+      <h2>Random Graph PWA version is a collection of React Components with source code</h2>
     </div>
   );
 }
