@@ -8,4 +8,6 @@
 
 .result {
     margin-top: 100px;
+    word-wrap: break-word;
+    width: 300px;
 }
