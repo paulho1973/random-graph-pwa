@@ -4,8 +4,10 @@ import './styles.css';
 
 import logo from './logo/Soccerball.svg';
 
+import FixedButton from './FixedButton';
 import Test from './Test';
 import Fa from './Fa';
+import Qrscan from './Qrscan';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -37,6 +39,7 @@ export default function App() {
           <Route path="center" element={<Center />} />
           <Route path="test" element={<Test />} />
           <Route path="fa" element={<Fa />} />
+          <Route path="qrscan" element={<Qrscan />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -78,10 +81,9 @@ function Layout() {
           </ul>
         </div>
 
-        <div className="content2-layout" onClick={Close}>
-           
+        <div className="content2-layout" onClick={Close}>     
           <Outlet />
-      
+          <FixedButton />
         </div>
 
     </div>
