@@ -10,6 +10,8 @@ import Fa from './Fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
+import { DATA } from './constants';
+
 export default function App() {
   return (
     <div>
@@ -60,26 +62,19 @@ function Layout() {
           <div>RANDOM GRAPH PWA</div>
           <div className="nav-icon" onClick={handleClick} ><FontAwesomeIcon icon={click ? faTimes : faBars} /></div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <Link to="/">
-            <li className="nav-item">
-              <div class="nav-links" onClick={click ? handleClick : null}>Home</div>
-            </li>
-            </Link>
-            <Link to="/about">
-            <li className="nav-item">
-              <div class="nav-links" onClick={click ? handleClick : null}>About</div>
-            </li>
-            </Link>
-            <Link to="/test">
-            <li className="nav-item">
-              <div class="nav-links" onClick={click ? handleClick : null}>Test</div>
-            </li>
-            </Link>
-            <Link to="/qrscan">
-            <li className="nav-item">
-              <div class="nav-links" onClick={click ? handleClick : null}>QR code scanner</div>
-            </li>
-            </Link>
+
+            {
+              DATA.map((item, i) => {
+                return (
+                  <Link to={item.link}>
+                  <li className="nav-item" key={i}>
+                    <div class="nav-links" onClick={click ? handleClick : null}>{item.label}</div>
+                  </li>
+                  </Link>
+                )
+              })
+            }
+
           </ul>
         </div>
 
