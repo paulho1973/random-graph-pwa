@@ -11,6 +11,7 @@
 // opt-in, read https://cra.link/PWA
 
 const VERSION = require('../package.json').version; 
+console.log(VERSION);
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
