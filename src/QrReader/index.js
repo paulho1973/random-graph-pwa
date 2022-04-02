@@ -3,7 +3,7 @@ import { Html5Qrcode } from "html5-qrcode";
 
 import styles from './QrReader.module.css';
 
-const qrConfig = { fps: 10, qrbox: { width: 150, height: 150 } };
+const qrConfig = { fps: 10, qrbox: { width: 200, height: 200 } };
 
 let html5QrCode;
 
