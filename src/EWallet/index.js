@@ -8,7 +8,7 @@ import Message from './Message';
 
 import styles from './EWallet.module.css';
 
-const qrConfig = { fps: 10, qrbox: { width: 150, height: 150 } };
+const qrConfig = { fps: 10, qrbox: { width: 200, height: 200 } };
 
 let html5QrCode;
 
@@ -114,7 +114,7 @@ const EWallet = () => {
 
 	const updateBalance = (product, price) => {
 		if ( product && typeof Number(price) === 'number' ) {
-			if ( balance > Number(price)) {
+			if ( balance >= Number(price)) {
 				setBalance(balance - Number(price));
 				let item = {
 					datetime : new Date().toLocaleString(),
