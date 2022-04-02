@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    width: 100%;
+}
+
+.result {
+    margin-top: 10px;
+    word-wrap: break-word;
+    width: 300px;
+}
+
+.camera {
+    width: 300px;
+}

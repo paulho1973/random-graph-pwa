@@ -46,7 +46,9 @@
 }
 
 .header2-layout {
-    position: relative;
+    z-index: 10;
+    position: sticky;
+    top: 0;
     height: 8vh;
     align-items: center;
     padding-top: 0.5rem;
@@ -191,6 +193,8 @@
   list-style: none;
   text-align: center;
   margin-right: 2rem;
+  height: 600px;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 480px) {
@@ -204,7 +208,7 @@
   left: 0px;
   opacity: 1;
   transition: all 0.5s ease;
-  z-index: 99;
+  z-index: 10;
 }
 
 /****************************************/

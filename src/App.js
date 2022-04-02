@@ -8,6 +8,9 @@ import FixedButton from './FixedButton';
 import Test from './Test';
 import Fa from './Fa';
 import Qrscan from './Qrscan';
+import PriceTag from './PriceTag';
+import EWallet from './EWallet';
+import QrReader from './QrReader';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -40,6 +43,9 @@ export default function App() {
           <Route path="test" element={<Test />} />
           <Route path="fa" element={<Fa />} />
           <Route path="qrscan" element={<Qrscan />} />
+          <Route path="pricetag" element={<PriceTag />} />
+          <Route path="ewallet" element={<EWallet />} />
+          <Route path="qrreader" element={<QrReader />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -71,7 +77,7 @@ function Layout() {
                 return (
                   <Link to={item.link}>
                   <li className="nav-item" key={i}>
-                    <div class="nav-links" onClick={click ? handleClick : null}>{item.label}</div>
+                    <div className="nav-links" onClick={click ? handleClick : null}>{item.label}</div>
                   </li>
                   </Link>
                 )
